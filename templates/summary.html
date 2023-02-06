@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Summary{% endblock %}</h1>
+        <div class='acc_block'>
+            <p>Total Balance On All Accounts: ${{ sum }}</p>
+            
+        </div>
+{% endblock %}

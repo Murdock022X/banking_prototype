@@ -1,0 +1,22 @@
+{% extends 'acc_base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Transfer Funds From Account: {{ acc_no }}{% endblock %}</h1>
+    <h2>Current Funds: ${{ bal }}</h2>
+    <form method="post">
+        <label for="transfer_no">Transfer Funds To Account Number: </label>
+        <input type="text" name="transfer_no"
+              placeholder="00000000"
+              value="{{ request.form['transfer_no'] }}"></input>
+        <br>
+
+        <br>
+        <label for="transfer_amt">Transfer Amount: $</label>
+        <input type="text" name="transfer_amt"
+              placeholder="0.00"
+              value="{{ request.form['transfer_amt'] }}"></input>
+        <br>
+        <br>
+        <button type="submit">Transfer Funds</button>
+    </form>
+{% endblock %}

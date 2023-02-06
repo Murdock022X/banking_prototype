@@ -1,0 +1,30 @@
+{% extends 'acc_base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Create A New Account{% endblock %}</h1>
+    <h2>Current Bank Settings</h2>
+    <p>Savings Account Interest Rate: {{ savings_rate }}%</p>
+    <p>Savings Account Minimum Balance: ${{ savings_min }}</p>
+    <br>
+    <p>Checkings Account Interest Rate: {{ checkings_rate }}%</p>
+    <p>Checkings Account Minimum Balance: ${{ checkings_min }}</p>
+    <br>
+    <form method="post">
+        <label for="acc_type">Account Type:</label>
+        <br>
+        <select name="acc_type" id="acc_type" 
+        value="{{ request.form['acc_type'] }}">
+            <option value="Savings">Savings</option>
+            <option value="Checkings">Checkings</option>
+        </select>
+        <br>
+        <br>
+        <label for="bal">Enter Your Starting Balance: $</label>
+        <input type="text" name="bal"
+              placeholder="100.00"
+              value="{{ request.form['bal'] }}"></input>
+        <br>
+        <br>
+        <button class="" type="submit">Create Account</button>
+    </form>
+{% endblock %}

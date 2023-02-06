@@ -1,0 +1,25 @@
+{% extends 'acc_base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Options For Account: {{ acc_no }}{% endblock %}</h1>
+    <h2>Current Balance: ${{ bal }}</h2>
+    <form method="post">
+        <label for="type">Deposit or Withdrawal?</label>
+        <br>
+        <select name="type" id="type" 
+        value="{{ request.form['type'] }}">
+            <option value="Withdrawal">Withdrawal</option>
+            <option value="Deposit">Deposit</option>
+        </select>
+        <br>
+        <br>
+        <label for="value">Value to Deposit or Withdraw: $</label>
+            <input type="text" name="value"
+                placeholder="100.00"
+                value="{{ request.form['value'] }}">
+            </input>
+        <br>
+        <br>
+        <button type="submit">Submit Request</button>
+    </form>
+{% endblock %}

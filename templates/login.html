@@ -1,0 +1,23 @@
+{% extends 'login_base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Sign In To Bank User Account {% endblock %}</h1>
+    <form method="post">
+        <label for="username">Enter Your Username:</label>
+        <br>
+        <input type="text" name="username"
+               placeholder="Username"
+               value="{{ request.form['username'] }}"></input>
+        <br>
+
+        <br>
+        <label for="password">Enter Your Password:</label>
+        <br>
+        <input type="text" name="password"
+               placeholder="Password"
+               value="{{ request.form['password'] }}"></input>
+        <br>
+        <br>
+        <button type="login" href="{{ url_for('home') }}">Login</button>
+    </form>
+{% endblock %}

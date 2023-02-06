@@ -1,0 +1,39 @@
+{% extends 'login_base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Create A Bank User Account {% endblock %}</h1>
+    <form method="post">
+       <label for="username">Enter A Username:</label>
+       <br>
+       <input type="text" name="username"
+              placeholder="Username"
+              value="{{ request.form['username'] }}"></input>
+       <br>
+
+       <br>
+       <label for="password">Enter A Password:</label>
+       <br>
+       <input type="text" name="password"
+              placeholder="Password"
+              value="{{ request.form['password'] }}"></input>
+       <br>
+
+       <br>
+       <label for="first_name">Enter Your First Name:</label>
+       <br>
+       <input type="text" name="first_name"
+              placeholder="First Name"
+              value="{{ request.form['first_name'] }}"></input>
+       <br>
+
+       <br>
+       <label for="last_name">Enter Your Last Name:</label>
+       <br>
+       <input type="text" name="last_name"
+              placeholder="Last Name"
+              value="{{ request.form['last_name'] }}"></input>
+       <br>
+       <br>
+       <button type="submit">Create Account</button>
+    </form>
+{% endblock %}

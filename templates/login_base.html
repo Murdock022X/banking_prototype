@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- BankingApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="disclaimer">
+        Disclaimer: This website is in no way a real banking website and has no ties to
+        any financial institutions, the website is simply a project to further exploration 
+        of financial technology.
+    </div>
+    <hr>
+    <nav class="nav_s1">
+        <a href="{{ url_for('login') }}">Log In</a>
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+    </nav>
+    <hr>
+    <div class="page">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div> 
+        {% endfor %}
+
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

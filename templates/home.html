@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}User Information{% endblock %}</h1>
+        <div class='page'>
+            <p>Username: {{ user_info['username'] }}</p>
+            <p>Name: {{ user_info['first_name'] }} {{ user_info['last_name'] }}</p>
+        </div>
+{% endblock %}

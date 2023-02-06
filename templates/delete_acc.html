@@ -1,0 +1,30 @@
+{% extends 'acc_base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Delete Account: {{ acc_no }}{% endblock %}</h1>
+    <form method="post">
+        <label for="transfer_option">Would You Like To Transfer Funds To A Different Account?</label>
+        <select name="transfer_option" id="transfer_option" 
+        value="{{ request.form['tranfer_option'] }}">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br>
+
+        <br>
+        <label for="transfer_no">Transfer Funds To Account Number: </label>
+        <input type="text" name="transfer_no"
+              placeholder="00000000"
+              value="{{ request.form['transfer_no'] }}"></input>
+        <br>
+
+        <br>
+        <label for="acc_no">Enter The Account Number For This Account To Confirm Deletion</label>
+        <input type="text" name="acc_no"
+              placeholder="00000000"
+              value="{{ request.form['acc_no'] }}"></input>
+        <br>
+        <br>
+        <button type="submit">Delete Account</button>
+    </form>
+{% endblock %}
