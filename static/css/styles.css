@@ -1,0 +1,120 @@
+:root {
+    --background1: #EAEAEA;
+    --background2: #0A0B0E;
+    --text1: #0A0B0E;
+    --text2: #EAEAEA;
+    --other1: #D0563A;
+    --other2: #ADADAE;
+    --other3: #AF3D8B;
+    --other4: #144753;
+    --other5: #4D9156;
+}
+
+.nav_s1 {
+    color: var(--other1);
+    text-decoration: none;
+    border-bottom: 3px solid var(--background2);
+    border-color: #0A0B0E;
+}
+
+.nav_s1 a {
+    color: var(--other1);
+    margin-left: 75px;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.nav_s1 a:hover {
+    color: var(--other3);
+    margin-left: 75px;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.nav_s2 {
+    border-bottom: 3px solid var(--background2);
+    border-color: #0A0B0E;
+    color: var(--other1);
+    text-decoration: None;
+}
+
+.nav_s2 a {
+    color: var(--other4);
+    margin-left: 75px;
+    font-size: 2em;
+    text-decoration: None;
+}
+
+.nav_s2 a:hover {
+    color: var(--other3);
+    margin-left: 75px;
+    font-size: 2em;
+    text-decoration: None;
+}
+
+button {
+    text-decoration: None;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7.5px;
+    background-color: var(--other4);
+    color: var(--text2);
+}
+
+input {
+    border-radius: 5px;
+}
+
+select {
+    text-decoration: None;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7.5px;
+    background-color: var(--other4);
+    color: var(--text2);
+}
+
+body {
+    background-color: var(--background1);
+}
+
+hr {
+    border: 0;
+    color: var(--background);
+}
+
+.disclaimer {
+    color: var(--text1);
+}
+
+.page {
+    color: var(--text1);
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--background1);
+}
+
+.acc_block {
+    box-sizing: border-box;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    background-color: var(--other5);
+}
+
+.alert {
+    color: var(--text2);
+    background-color: var(--other4);
+    box-sizing: border-box;
+    padding: 7.5px;
+    border-radius: 7.5px;
+}
+
+.edit_anchor {
+    text-decoration: None;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7.5px;
+    background-color: var(--other4);
+    color: var(--text2);
+}
+
